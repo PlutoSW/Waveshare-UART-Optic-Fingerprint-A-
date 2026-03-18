@@ -57,6 +57,33 @@ The library uses `/dev/serial0` by default. You must enable the Hardware Serial 
    python index.py
    ```
 
+3. **Library Usage Examples:**
+   ```python
+   from main import FingerprintReader
+
+   # Initialize
+   reader = FingerprintReader()
+
+   # --- Get User Count ---
+   print("User count:", reader.get_user_count())
+
+   # --- Enroll Fingerprint (ID: 5) ---
+   # Follow the terminal prompts
+   reader.enroll_fingerprint(user_id=5)
+
+   # --- Verify Fingerprint ---
+   user_id = reader.verify_1_to_n()
+   if user_id != -1:
+       print(f"Verified! User ID: {user_id}")
+   else:
+       print("Not recognized.")
+
+   # --- Delete User (ID: 5) ---
+   reader.delete_user(user_id=5)
+
+   reader.close()
+   ```
+
 ---
 
 
@@ -104,6 +131,33 @@ Kütüphane varsayılan olarak `/dev/serial0` portunu kullanır. `sudo raspi-con
 2. **Örneği Çalıştır:**
    ```bash
    python index.py
+   ```
+
+3. **Kütüphane Kullanım Örnekleri:**
+   ```python
+   from main import FingerprintReader
+
+   # Başlat
+   reader = FingerprintReader()
+
+   # --- Kullanıcı Sayısını Al ---
+   print("Kullanıcı sayısı:", reader.get_user_count())
+
+   # --- Parmak İzi Kaydet (ID: 5) ---
+   # Terminal yönergelerini takip edin
+   reader.enroll_fingerprint(user_id=5)
+
+   # --- Parmak İzi Doğrulama ---
+   user_id = reader.verify_1_to_n()
+   if user_id != -1:
+       print(f"Doğrulandı! Kullanıcı ID: {user_id}")
+   else:
+       print("Tanınamadı.")
+
+   # --- Kullanıcı Sil (ID: 5) ---
+   reader.delete_user(user_id=5)
+
+   reader.close()
    ```
 
 ---
