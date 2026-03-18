@@ -7,7 +7,7 @@
 ## English
 
 ### Overview
-This library provides a Python interface for interacting with UART capacitive fingerprint sensors (protocol utilizing `0xF5` start/end codes) on Linux devices, specifically tailored for the **Raspberry Pi**.
+This library provides a Python interface for interacting with UART optical fingerprint sensors (protocol utilizing `0xF5` start/end codes) on Linux devices, specifically tailored for the **Raspberry Pi**.
 
 ### Features
 - **Enrollment**: Step-by-step fingerprint registration (3 captures).
@@ -63,7 +63,7 @@ The library uses `/dev/serial0` by default. You must enable the Hardware Serial 
 ## Türkçe
 
 ### Genel Bakış
-Bu kütüphane, **Raspberry Pi** gibi Linux cihazlar üzerinde UART kapasitif parmak izi sensörleri (protokolü `0xF5` başlangıç/bitiş kodlarını kullanan) ile etkileşim kurmak için bir Python arayüzü sağlar.
+Bu kütüphane, **Raspberry Pi** gibi Linux cihazlar üzerinde UART optic parmak izi sensörleri (protokolü `0xF5` başlangıç/bitiş kodlarını kullanan) ile etkileşim kurmak için bir Python arayüzü sağlar.
 
 ### Özellikler
 - **Kayıt (Enroll)**: Adım adım parmak izi kaydı (3 okuma gerektirir).
