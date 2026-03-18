@@ -27,7 +27,7 @@ The library uses `/dev/serial0` by default. You must enable the Hardware Serial 
 
 | Sensor Pin | Raspberry Pi Pin | Description |
 | :--- | :--- | :--- |
-| **VIN / VCC** | 3.3V (Pin 1) | Power supply (Check your sensor specs, usually 3.3V) |
+| **VIN / VCC** | 5V (Pin 1) | Power supply (Check your sensor specs, usually 3.3V) |
 | **GND** | GND (Pin 6) | Ground |
 | **RX** | TX (GPIO 14 / Pin 8) | Data Receive (Sensor receives from Pi) |
 | **TX** | RX (GPIO 15 / Pin 10)| Data Transmit (Sensor sends to Pi) |
@@ -40,7 +40,7 @@ The library uses `/dev/serial0` by default. You must enable the Hardware Serial 
 
 | Sensor Pin | Arduino Uno/Nano | Description |
 | :--- | :--- | :--- |
-| **VIN** | 3.3V or 5V | Power |
+| **VIN** | 5V | Power |
 | **GND** | GND | Ground |
 | **RX** | TX (Pin 1 or SoftSerial) | Requires voltage divider (5V -> 3.3V) if sensor is not 5V tolerant |
 | **TX** | RX (Pin 0 or SoftSerial) | Connects to Arduino RX |
@@ -78,7 +78,7 @@ Kütüphane varsayılan olarak `/dev/serial0` portunu kullanır. `sudo raspi-con
 
 | Sensör Pini | Raspberry Pi Pini | Açıklama |
 | :--- | :--- | :--- |
-| **VIN / VCC** | 3.3V (Pin 1) | Güç beslemesi (Sensörünüzün voltajını kontrol edin) |
+| **VIN / VCC** | 5V (Pin 1) | Güç beslemesi (Sensörünüzün voltajını kontrol edin) |
 | **GND** | GND (Pin 6) | Toprak (Şase) |
 | **RX** | TX (GPIO 14 / Pin 8) | Veri Alma (Sensör Pi'den alır) |
 | **TX** | RX (GPIO 15 / Pin 10)| Veri Gönderme (Sensör Pi'ye gönderir) |
@@ -89,7 +89,7 @@ Kütüphane varsayılan olarak `/dev/serial0` portunu kullanır. `sudo raspi-con
 
 | Sensör Pini | Arduino Uno/Nano | Açıklama |
 | :--- | :--- | :--- |
-| **VIN** | 3.3V veya 5V | Güç |
+| **VIN** | 5V | Güç |
 | **GND** | GND | Toprak |
 | **RX** | TX (Pin 1 veya SoftSerial) | Arduino 5V ise voltaj bölücü gerekebilir |
 | **TX** | RX (Pin 0 veya SoftSerial) | Arduino RX pinine bağlanır |
